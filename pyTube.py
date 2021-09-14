@@ -1,7 +1,19 @@
 import subprocess
-from pytube import YouTube
-from pytube.exceptions import RegexMatchError
 import platform
+from time import sleep
+try :
+    from pytube import YouTube
+    from pytube.exceptions import RegexMatchError
+except ModuleNotFoundError:
+    print("[!] Could not find pytube lib.")
+    sleep(2)
+    print("[*] Installing pytube lib")
+    sleep(1)
+    subprocess.call("pip install pytube",shell=True)
+    print("[*] Done.")
+finally:
+    from pytube import YouTube
+    from pytube.exceptions import RegexMatchError
 
 logo = '''
        __     __         _         _                       
