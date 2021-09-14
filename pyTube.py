@@ -6,11 +6,12 @@ try :
     from pytube.exceptions import RegexMatchError
 except ModuleNotFoundError:
     print("[!] Could not find pytube lib.")
-    sleep(2)
-    print("[*] Installing pytube lib")
-    sleep(1)
+    sleep(3)
+    print("[*] Installing pytube lib...")
+    sleep(3)
     subprocess.call("pip install pytube",shell=True)
     print("[*] Done.")
+    sleep(3)
 finally:
     from pytube import YouTube
     from pytube.exceptions import RegexMatchError
