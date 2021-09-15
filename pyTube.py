@@ -12,7 +12,6 @@ except ModuleNotFoundError:
     subprocess.call("pip install pytube",shell=True)
     print("[*] Done.")
     sleep(3)
-finally:
     from pytube import YouTube
     from pytube.exceptions import RegexMatchError
 
